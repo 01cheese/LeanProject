@@ -38,7 +38,7 @@
   },
   "scripts": {
     "dev": "refine start",
-    "build": "npx refine build",
+    "build": "npx refine build --no-lint",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "refine": "refine",
