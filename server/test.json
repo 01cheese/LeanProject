@@ -1,0 +1,208 @@
+{
+  "leanTemplates": {
+    "fiveS": {
+      "sort": [
+        {
+          "object": "іваіва",
+          "status": "віа",
+          "reason": "ві"
+        },
+        {
+          "object": "ваів",
+          "status": "віауц8щ",
+          "reason": "222"
+        }
+      ],
+      "setInOrder": [
+        {
+          "object": "234ск",
+          "location": "кцук8щ",
+          "labeling": "к8ан"
+        },
+        {
+          "object": "3874каргу",
+          "location": "4ика",
+          "labeling": "куцщгк"
+        }
+      ],
+      "shine": [
+        {
+          "zone": "укук",
+          "responsible": "ук",
+          "frequency": "укук"
+        }
+      ],
+      "standardize": [
+        {
+          "procedure": "укукукук"
+        }
+      ]
+    },
+    "leanCanvas": {
+      "problem": "Проблема 123",
+      "solution": "Решениеоіар",
+      "uniqueValue": "оваірдо ві",
+      "unfairAdvantage": "віа ловра івра",
+      "customerSegments": "вау8г а0982уайош ",
+      "keyMetrics": "івао іщвоаівта",
+      "channels": "в ашрщ шугращшгвр",
+      "costStructure": "уашг398кгуацйщоу",
+      "revenueStreams": "вшагр щшгвар"
+    },
+    "kaizen": {
+      "beforeAfter": {},
+      "ideas": [
+        {
+          "author": {
+            "_id": "682334cd166f7f141c0f8e09",
+            "email": "zelenko009@gmail.com"
+          },
+          "idea": "Переделать иконку ",
+          "criticality": 5,
+          "status": "розгляд",
+          "date": "2025-05-23",
+          "comment": "Обязательно",
+          "likes": [
+            "682334cd166f7f141c0f8e09",
+            "6824f1927122f4e1d6f33ba3"
+          ],
+          "_id": "6829fd0a04868acfcde05bfd"
+        },
+        {
+          "author": {
+            "_id": "6824f1927122f4e1d6f33ba3",
+            "email": "vadym.zelenko@nure.ua"
+          },
+          "idea": "Настроить телевизор ",
+          "criticality": 2,
+          "status": "впроваджено",
+          "date": "2025-05-18",
+          "comment": "Черний",
+          "likes": [
+            "682334cd166f7f141c0f8e09"
+          ],
+          "_id": "682a1402e4c9d5c43cd9ffac"
+        }
+      ]
+    },
+    "kanban": [
+      {
+        "title": "Поменять тип акумуляторов",
+        "status": "todo",
+        "assignedTo": "zelenko009@gmail.com",
+        "dueDate": "2025-05-19"
+      }
+    ],
+    "audit": [
+      {
+        "type": "Перевиробництво",
+        "location": "nen",
+        "dateDetected": "2025-05-18",
+        "responsible": {
+          "_id": "682334cd166f7f141c0f8e09",
+          "email": "zelenko009@gmail.com",
+          "password": "$2a$12$EMwp/QLbQQ2jGlq1T9MpHuWTiO1l2AOHhxjPgdsPZzJ8Jl6O.FbYG",
+          "name": "Vadym Zelenko",
+          "__v": 0
+        },
+        "severity": "3",
+        "comment": "jebfd"
+      },
+      {
+        "type": "Очікування",
+        "location": "er",
+        "dateDetected": "2025-05-18",
+        "responsible": {
+          "_id": "6824f1927122f4e1d6f33ba3",
+          "name": "Вадим Зеленько",
+          "email": "vadym.zelenko@nure.ua",
+          "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLF2KhAT71uO5af_Cp9_GY20epDsbkjNsF4IKqbN0K5G-OZVBPT=s96-c",
+          "__v": 0
+        },
+        "severity": "1",
+        "comment": "wer"
+      },
+      {
+        "type": "Зайве переміщення",
+        "location": "wer",
+        "dateDetected": "2025-05-18",
+        "responsible": {
+          "_id": "682334cd166f7f141c0f8e09",
+          "email": "zelenko009@gmail.com",
+          "password": "$2a$12$EMwp/QLbQQ2jGlq1T9MpHuWTiO1l2AOHhxjPgdsPZzJ8Jl6O.FbYG",
+          "name": "Vadym Zelenko",
+          "__v": 0
+        },
+        "severity": "4",
+        "comment": "wer"
+      },
+      {
+        "type": "Надмірна обробка",
+        "location": "тестування",
+        "dateDetected": "2025-05-18",
+        "responsible": {
+          "_id": "6824f1927122f4e1d6f33ba3",
+          "name": "Вадим Зеленько",
+          "email": "vadym.zelenko@nure.ua",
+          "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLF2KhAT71uO5af_Cp9_GY20epDsbkjNsF4IKqbN0K5G-OZVBPT=s96-c",
+          "__v": 0
+        },
+        "severity": "1",
+        "comment": "wer"
+      },
+      {
+        "type": "Дефекти",
+        "location": "планування",
+        "dateDetected": "2025-05-18",
+        "severity": "5",
+        "comment": "wwwww"
+      },
+      {
+        "type": "Зайві дії",
+        "location": "доставка",
+        "dateDetected": "2025-05-18",
+        "severity": "1",
+        "comment": "r9hp"
+      }
+    ]
+  },
+  "_id": "6828c2f49ac4501218aac021",
+  "name": "First",
+  "description": "Інтерфейс можна оновити так, щоб інвайт просто зникав після такого повідомлення, або показати кнопку. Хочеш — можу зробити тобі повний компонент, який фільтрує і красиво показує такі повідомлення.",
+  "type": "A3",
+  "visibility": "private",
+  "author": "682334cd166f7f141c0f8e09",
+  "authorName": "Vadym Zelenko",
+  "keywords": [
+    "5S, склад, оптимізація"
+  ],
+  "participants": [
+    {
+      "user": {
+        "_id": "682334cd166f7f141c0f8e09",
+        "email": "zelenko009@gmail.com",
+        "password": "$2a$12$EMwp/QLbQQ2jGlq1T9MpHuWTiO1l2AOHhxjPgdsPZzJ8Jl6O.FbYG",
+        "name": "Vadym Zelenko",
+        "__v": 0
+      },
+      "role": "admin",
+      "_id": "6828c2f49ac4501218aac022"
+    },
+    {
+      "user": {
+        "_id": "6824f1927122f4e1d6f33ba3",
+        "name": "Вадим Зеленько",
+        "email": "vadym.zelenko@nure.ua",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLF2KhAT71uO5af_Cp9_GY20epDsbkjNsF4IKqbN0K5G-OZVBPT=s96-c",
+        "__v": 0
+      },
+      "role": "user",
+      "_id": "682911a21b534f1e27163621"
+    }
+  ],
+  "accessLevel": "owner",
+  "priority": "medium",
+  "createdAt": "2025-05-17T17:10:12.535Z",
+  "updatedAt": "2025-05-17T17:10:12.535Z",
+  "__v": 24
+}
