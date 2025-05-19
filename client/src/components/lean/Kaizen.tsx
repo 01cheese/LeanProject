@@ -62,7 +62,7 @@ export const Kaizen = ({ kaizenData, onChange, participants, projectId }) => {
 
     // Зберігаємо автоматично у leanTemplates.kaizen
     try {
-      await axios.put(`http://localhost:9000/api/v1/lean/${projectId}`, {
+      await axios.put(`https://leanproject.onrender.com/api/v1/lean/${projectId}`, {
         leanTemplates: {
           kaizen: updated
         }
@@ -104,7 +104,7 @@ export const Kaizen = ({ kaizenData, onChange, participants, projectId }) => {
   // Голосування: після відповіді API оновлюємо через onChange
   const handleVote = async (id: string, type: "like" | "dislike") => {
     try {
-      const res = await axios.post(`http://localhost:9000/api/kaizen/vote/${id}`, {
+      const res = await axios.post(`https://leanproject.onrender.com/api/kaizen/vote/${id}`, {
         type,
         userEmail: currentUser.email
       });
