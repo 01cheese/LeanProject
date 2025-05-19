@@ -29,29 +29,37 @@ const STATUS_OPTIONS = ["розгляд", "впроваджено"];
 
 export const Kaizen = ({ kaizenData, onChange, participants, projectId }) => {
 
-  if (!participants || participants.length === 0) {
-    return <Typography>Завантаження учасників...</Typography>;
-  }
+    // Локальний стейт копіює пропс
+  const [localData, setLocalData] = useState(kaizenData || { ideas: [] });
 
-  const userOptions = (participants || []).map(p => p.user);
-
-  const currentUser = JSON.parse(localStorage.getItem("user") || "{}");
-
-  // Фільтри на UI
+    // Фільтри на UI
   const [filters, setFilters] = useState({
     status: "",
     author: "",
     criticality: ""
   });
+    const userOptions = (participants || []).map(p => p.user);
 
-  // Локальний стейт копіює пропс
-  const [localData, setLocalData] = useState(kaizenData || { ideas: [] });
+  const currentUser = JSON.parse(localStorage.getItem("user") || "{}");
 
-
-  // При оновленні kaizenData – синхронізуємо локальний стейт
+    // При оновленні kaizenData – синхронізуємо локальний стейт
   useEffect(() => {
     setLocalData(kaizenData || { ideas: [] });
   }, [kaizenData]);
+
+
+  
+  if (!participants || participants.length === 0) {
+    return <Typography>Завантаження учасників...</Typography>;
+  }
+
+
+
+
+
+
+
+
 
 
   // Відправляємо наверх оновлений розділ
