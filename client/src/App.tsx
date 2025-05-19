@@ -60,7 +60,7 @@ function App() {
       const profileObj = credential ? parseJwt(credential) : null
 
       if (profileObj) {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/users`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
