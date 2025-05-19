@@ -3,21 +3,24 @@ import { AgentCard } from 'components'
 import { Box, Typography } from '@mui/material'
 
 const Agents = () => {
-  const { data: currentUser, isLoading: loadingUser } = useGetIdentity()
+  const { data: currentUser, isLoading: loadingUser } = useGetIdentity();
 
-  const userId = currentUser?._id
+const userId = currentUser?._id;
 
-  if (loadingUser || !userId) {
-    return <div>🔄 Завантаження користувача...</div>
+const { data, isLoading, isError } = useCustom({
+  url: userId ? `/lean/agents/${userId}` : "",
+  method: 'get',
+  queryOptions: {
+    enabled: !!userId, // 🔥 ключевой момент
   }
+});
 
-  const { data, isLoading, isError } = useCustom({
-    url: `/lean/agents/${userId}`,
-    method: 'get',
-  })
+if (loadingUser || !userId) {
+  return <div>🔄 Завантаження користувача...</div>
+}
 
-  if (isLoading) return <div>🔄 Завантаження агентів...</div>
-  if (isError) return <div>❌ Помилка при отриманні агентів</div>
+if (isLoading) return <div>🔄 Завантаження агентів...</div>
+if (isError) return <div>❌ Помилка при отриманні агентів</div>
 
   const agents = data?.data ?? []
 
