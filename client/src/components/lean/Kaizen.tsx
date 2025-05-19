@@ -38,8 +38,8 @@ export const Kaizen = ({ kaizenData, onChange, participants, projectId }) => {
     author: "",
     criticality: ""
   });
-    const userOptions = (participants || []).map(p => p.user);
-
+  
+  
   const currentUser = JSON.parse(localStorage.getItem("user") || "{}");
 
     // При оновленні kaizenData – синхронізуємо локальний стейт
@@ -53,7 +53,7 @@ export const Kaizen = ({ kaizenData, onChange, participants, projectId }) => {
     return <Typography>Завантаження учасників...</Typography>;
   }
 
-
+ const userOptions = participants.map(p => p.user);
 
 
 
