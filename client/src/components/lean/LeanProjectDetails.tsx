@@ -59,7 +59,7 @@ const LeanProjectDetails = () => {
   const generateAI = async () => {
     setAiLoading(true);
     try {
-      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/lean/${project._id}/analyze`, {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/lean/${project._id}`, {
         method: "POST",
       });
       const data = await res.json();
