@@ -37,19 +37,19 @@ app.use('/api/v1/properties', propertyRouter)
 
 const startServer = async () => {
   try {
-    // connect to the database...
-    connectDB(process.env.MONGODB_URL)
+    await connectDB(process.env.MONGODB_URL);
 
-   const PORT = process.env.PORT || 9000;
+    const PORT = process.env.PORT || 9000;
 
-app.listen(PORT, () =>
- console.log(`Server started on port http://localhost:${PORT} 🚀`);
+    app.listen(PORT, () => {
+      console.log(`Server started on port http://localhost:${PORT} 🚀`);
+    });
 
-)
   } catch (error) {
-    console.log(error)
+    console.error(error);
   }
-}
+};
+
 
 startServer()
 
