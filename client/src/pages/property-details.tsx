@@ -41,21 +41,21 @@ const PropertyDetails = () => {
   const isCurrentUser = user.email === propertyDetails.creator.email
 
   const handleDeleteProperty = () => {
-    const response = confirm('Are you sure you want to delete this property?')
-    if (response) {
-      mutate(
-        {
-          resource: 'properties',
-          id: id as string,
+  if (typeof window !== "undefined" && window.confirm('Are you sure you want to delete this property?')) {
+    mutate(
+      {
+        resource: 'properties',
+        id: id as string,
+      },
+      {
+        onSuccess: () => {
+          navigate('/properties');
         },
-        {
-          onSuccess: () => {
-            navigate('/properties')
-          },
-        },
-      )
-    }
+      }
+    );
   }
+};
+
 
   return (
     <Box
