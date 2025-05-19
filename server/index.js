@@ -15,12 +15,7 @@ dotenv.config()
 const app = express()
 
 // 🔧 Крос-домен
-app.use(
-  cors({
-    origin: "https://vadym-zelenko.onrender.com", // заміни на актуальний
-    credentials: true,
-  })
-)
+app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ limit: '10mb' }))
