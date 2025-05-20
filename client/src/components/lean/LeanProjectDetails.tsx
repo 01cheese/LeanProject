@@ -59,10 +59,8 @@ const LeanProjectDetails = () => {
  const generateAI = async () => {
   setAiLoading(true);
   try {
-    const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/ai/gemini`, {
+    const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/lean/${project._id}/analyze`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(project) // или только нужные поля
     });
     const data = await res.json();
     setAiResult(data.result || "❌ Відповідь порожня");
@@ -73,6 +71,7 @@ const LeanProjectDetails = () => {
     setAiLoading(false);
   }
 };
+
 
 
 
