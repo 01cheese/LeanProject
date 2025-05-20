@@ -56,21 +56,24 @@ const LeanProjectDetails = () => {
     alert("Зміни збережено!");
   };
 
-  const generateAI = async () => {
-    setAiLoading(true);
-    try {
-      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/lean/${project._id}/analyze`, {
-        method: "POST",
-      });
-      const data = await res.json();
-      setAiResult(data.result || "❌ Відповідь порожня");
-    } catch (err) {
-      console.error("AI error", err);
-      setAiResult("❌ Помилка запиту до AI");
-    } finally {
-      setAiLoading(false);
-    }
-  };
+ const generateAI = async () => {
+  setAiLoading(true);
+  try {
+    const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/ai/gemini`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(project) // или только нужные поля
+    });
+    const data = await res.json();
+    setAiResult(data.result || "❌ Відповідь порожня");
+  } catch (err) {
+    console.error("AI error", err);
+    setAiResult("❌ Помилка запиту до AI");
+  } finally {
+    setAiLoading(false);
+  }
+};
+
 
 
 
