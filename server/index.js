@@ -10,6 +10,14 @@ import notificationRouter from './routes/notification.routes.js'
 import kaizenRouter from './routes/kaizen.routes.js'
 import aiRouter from './routes/ai.routes.js'
 
+import { fetch, Headers, Request, Response } from 'undici';
+
+global.fetch = fetch;
+global.Headers = Headers;
+global.Request = Request;
+global.Response = Response;
+
+
 dotenv.config()
 
 const app = express()
