@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-export const ai = new GoogleGenAI({ apiKey: "AIzaSyCC25qefuH5VpLtls601SF4iF83wedaBtY" });
+export const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API });
 
 export function cleanData(obj) {
   if (Array.isArray(obj)) return obj.map(cleanData).filter(Boolean);
