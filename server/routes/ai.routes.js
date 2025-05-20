@@ -28,7 +28,11 @@ router.post("/gemini", async (req, res) => {
 
     console.log("✅ Відповідь Gemini (весь об'єкт):", JSON.stringify(result, null, 2));
 
-    const text = result?.response?.candidates?.[0]?.content?.parts?.[0]?.text || "🤖 Помилка: Gemini не відповів.";
+    const text =
+  result?.response?.candidates?.[0]?.content?.parts?.[0]?.text ||
+  result?.candidates?.[0]?.content?.parts?.[0]?.text ||
+  "🤖 Помилка: Gemini не відповів.";
+
 
     console.log("📦 Оброблений текст Gemini:", text.slice(0, 500) + (text.length > 500 ? "\n... (truncated)" : ""));
 
