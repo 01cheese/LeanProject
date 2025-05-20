@@ -63,7 +63,14 @@ const LeanProjectDetails = () => {
       method: "POST",
     });
     const data = await res.json();
-    setAiResult(data.result || "❌ Відповідь порожня");
+    const aiText = data.result || "❌ Відповідь порожня";
+
+    // 🔥 Оновлюємо як `aiResult`, так і `project.aiAnalysis`
+    setAiResult(aiText);
+    setProject((prev) => ({
+      ...prev,
+      aiAnalysis: aiText,
+    }));
   } catch (err) {
     console.error("AI error", err);
     setAiResult("❌ Помилка запиту до AI");
